@@ -1,0 +1,127 @@
+html,
+body {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #b5d993;
+  --secondary-bg-color: #fffcce;
+  --dark-green-color: #0a352b;
+  --mid-green-color: #699a58;
+  --light-purple-color: #d5ceff;
+  --mid-purple-color: #aca4c6;
+  --dark-purple-color: #8c759a;
+}
+
+html,
+body {
+  background-color: var(--main-bg-color);
+  width: 100%;
+  min-height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+#root {
+  background-color: var(--secondary-bg-color);
+  width: 800px;
+  padding: 32px;
+  box-shadow: 6px 6px 4px #699a58;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h2 {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+}
+
+h2 {
+  color: var(--dark-green-color);
+  font-family: "Playfair Display", serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  padding: 20px;
+}
+
+#fairy-canvas {
+  width: 350px;
+  height: 350px;
+  border: 3px solid var(--mid-green-color);
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button {
+  font-size: 12px;
+  font-weight: 600;
+  width: 160px;
+  height: 36px;
+  background-color: var(--light-purple-color);
+  color: var(--dark-green-color);
+  border: 3px solid var(--dark-purple-color);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--light-green-color);
+}
+
+.options-container {
+  background-color: var(--main-bg-color);
+  padding: 20px;
+  width: 100%;
+}
+
+.option-section {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--mid-green-color);
+}
+
+.option {
+  padding: 8px;
+  line-height: 32px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: var(--light-purple-color);
+  border: 3px solid var(--dark-purple-color);
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    margin: auto;
+  }
+  main {
+    flex-direction: column;
+  }
+  .options-container {
+    width: auto;
+  }
+}
