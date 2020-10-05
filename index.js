@@ -19,7 +19,7 @@ function render() {
   });
 }
 
-function resetClick() {
+function reset() {
   console.log("reset");
   Array.from(document.getElementsByClassName("fairy-img")).forEach((img) => {
     // console.log(img);
@@ -104,6 +104,6 @@ document.querySelectorAll(".option.single").forEach((item) => {
   item.addEventListener("click", toggleSingleItem);
 });
 
-document.getElementById("reset").addEventListener("click", resetClick);
+document.getElementById("reset").addEventListener("click", reset);
 
 window.addEventListener("load", render);

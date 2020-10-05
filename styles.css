@@ -29,7 +29,7 @@ body {
 
 #root {
   background-color: var(--secondary-bg-color);
-  width: 800px;
+  max-width: 800px;
   padding: 32px;
   box-shadow: 6px 6px 4px #699a58;
 }
@@ -49,6 +49,7 @@ h1 {
 h2 {
   color: var(--dark-green-color);
   font-family: "Playfair Display", serif;
+  margin: 0.8rem 0;
 }
 
 main {
@@ -103,7 +104,7 @@ button:hover {
 
 .option {
   padding: 8px;
-  line-height: 32px;
+  line-height: 48px;
   position: relative;
   z-index: 0;
   cursor: pointer;
@@ -115,13 +116,33 @@ button:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  html,
+  body {
+    padding: 10px;
+  }
   #root {
     margin: auto;
+    width: 100%;
+    padding: 16px;
+  }
+  .col {
+    padding: 20px 5px;
   }
   main {
     flex-direction: column;
   }
   .options-container {
     width: auto;
+  }
+  #fairy-canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  .buttons button {
+    width: 90px;
+  }
+  .optins {
+    padding: 0 10px;
   }
 }
