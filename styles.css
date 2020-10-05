@@ -115,6 +115,14 @@ button:hover {
   border: 3px solid var(--dark-purple-color);
 }
 
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+
 @media only screen and (max-width: 600px) {
   html,
   body {
