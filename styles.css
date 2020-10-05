@@ -149,6 +149,7 @@ footer {
 
   .buttons button {
     width: 90px;
+    text-align: center;
   }
   .optins {
     padding: 0 10px;
