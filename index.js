@@ -7,6 +7,14 @@ let style = getComputedStyle(document.body);
 let lightPurpleColor = style.getPropertyValue("--light-purple-color");
 let darkPurpleColor = style.getPropertyValue("--dark-purple-color");
 
+// function preRender() {
+//   Array.from(document.getElementsByClassName("fairy-img")).forEach((img) => {
+//     if (img.classList.contains("default")) {
+//       ctx.drawImage(img, 0, 0, imgSize, imgSize);
+//     }
+//   });
+// }
+
 function render() {
   ctx.clearRect(0, 0, imgSize, imgSize);
   Array.from(document.getElementsByClassName("fairy-img")).forEach((img) => {
@@ -30,7 +38,7 @@ function reset() {
       img.classList.add("display");
     }
   });
-  render();
+  preRender();
 }
 
 function resetStyle() {
@@ -39,9 +47,11 @@ function resetStyle() {
     item.style.border = "";
   });
 }
+
 // toggle that applies to fairies or decorations
 function toggleMultipleItems(e) {
   const optionValue = e.srcElement.innerHTML.toLowerCase();
+  //const optionValue = e.target.id;
   const category = e.srcElement.classList[1];
   //   console.log(e.srcElement.classList[1]);
   const imgItem = document.getElementById(`${category}-${optionValue}`);
@@ -75,6 +85,7 @@ function removeCategoryImg(category) {
 //toggle single asset - if an asset gets selected, remove the rest from the same category
 function toggleSingleItem(e) {
   const optionValue = e.srcElement.innerHTML.toLowerCase();
+  //const optionValue = e.target.id;
   const category = e.srcElement.classList[1];
   const imgItem = document.getElementById(`${category}-${optionValue}`);
   //   console.log(imgItem);

@@ -2,6 +2,7 @@
 
 ## Next Step:
 
-- mobile ux fix
-- image layer bug fix
-- randomize button function
+- fix default layer bug
+- svg button
+- add more assets
+- button function change (save image and share)
