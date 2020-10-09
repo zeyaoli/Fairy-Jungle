@@ -15,143 +15,136 @@ body {
 
 html,
 body {
-  background-color: var(--main-bg-color);
+  background-color: var(--secondary-bg-color);
   width: 100%;
   min-height: 100%;
-  margin: auto;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  font-family: "Lato", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
 }
 
 #root {
   background-color: var(--secondary-bg-color);
-  max-width: 800px;
-  padding: 32px;
-  box-shadow: 6px 6px 4px #699a58;
-}
-
-header h1 {
-  margin: 0;
-}
-
-header h2 {
-  margin: 0;
-}
-
-h1 {
-  font-family: "Playfair Display", serif;
+  max-width: 1200px;
 }
 
 h2 {
   color: var(--dark-green-color);
-  font-family: "Playfair Display", serif;
-  margin: 0.8rem 0;
+  margin: 0rem 0.8rem;
+  padding-top: 10px;
+  vertical-align: center;
 }
 
 main {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
-.col {
-  padding: 20px;
+.options-container {
+  border-left: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #fairy-canvas {
-  width: 350px;
-  height: 350px;
-  border: 3px solid var(--mid-green-color);
-  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  width: 700px;
+  height: 700px;
 }
 
 .buttons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
 }
 
 button {
+  font-family: inherit;
   font-size: 12px;
   font-weight: 600;
   width: 160px;
   height: 36px;
-  background-color: var(--light-purple-color);
-  color: var(--dark-green-color);
-  border: 3px solid var(--dark-purple-color);
+  margin: 10px;
+  background-color: var(--secondary-bg-color);
+  border: 1px solid #000000;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: var(--light-green-color);
-}
-
-.options-container {
-  background-color: var(--main-bg-color);
-  padding: 20px;
-  width: 100%;
+  background-color: var(--light-purple-color);
 }
 
 .option-section {
-  padding-bottom: 10px;
+  padding: 10px 20px;
   border-bottom: 1px solid var(--mid-green-color);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .option {
-  padding: 8px;
+  padding: 0px 8px;
   line-height: 48px;
   position: relative;
   z-index: 0;
   cursor: pointer;
 }
 
-.option:hover {
-  background-color: var(--light-purple-color);
-  border: 3px solid var(--dark-purple-color);
-}
-
 footer {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 15px;
+  padding: 5px 10px;
+  text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+footer p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 800px) {
   html,
   body {
-    padding: 10px;
+    padding: 0;
+    margin: 0;
   }
   #root {
     margin: auto;
     width: 100%;
-    padding: 16px;
-  }
-  .col {
-    padding: 20px 5px;
   }
   main {
     flex-direction: column;
   }
   .options-container {
     width: auto;
+    border: none;
   }
   #fairy-canvas {
     width: 100%;
     height: 100%;
   }
 
+  .option-section {
+    padding: 0;
+  }
+
   .buttons button {
     width: 90px;
     text-align: center;
   }
-  .optins {
-    padding: 0 10px;
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-between;
   }
 }

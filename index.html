@@ -6,40 +6,19 @@
     <title>Fairy Jungle</title>
     <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div id="root">
-      <header>
+      <!-- <header>
         <h1>Fairy Jungle</h1>
         <h2>Create Your Fairy World</h2>
-      </header>
+      </header> -->
       <main>
         <div class="col canvas-container">
           <div style="display: none">
-            <img
-              src="assets/pot/o_pot-white.png"
-              id="pot-white"
-              class="fairy-img default"
-            />
-            <img
-              src="assets/rock/o_rock.png"
-              id="rock"
-              class="fairy-img rock default"
-            />
-            <img
-              src="assets/rock/rock-egg.png"
-              id="rock-egg"
-              class="fairy-img rock"
-            />
-            <img
-              src="assets/rock/rock-yellow.png"
-              id="rock-yellow"
-              class="fairy-img rock"
-            />
-
             <img
               src="assets/table/table-wood.png"
               id="table-wood"
@@ -56,6 +35,11 @@
               class="fairy-img table"
             />
             <img
+              src="assets/pot/o_pot-white.png"
+              id="pot-white"
+              class="fairy-img default"
+            />
+            <img
               src="assets/pot/pot-black.png"
               id="pot-black"
               class="fairy-img pot"
@@ -69,6 +53,21 @@
               src="assets/pot/pot-brown.png"
               id="pot-brown"
               class="fairy-img pot"
+            />
+            <img
+              src="assets/rock/o_rock.png"
+              id="rock"
+              class="fairy-img rock default"
+            />
+            <img
+              src="assets/rock/rock-egg.png"
+              id="rock-egg"
+              class="fairy-img rock"
+            />
+            <img
+              src="assets/rock/rock-yellow.png"
+              id="rock-yellow"
+              class="fairy-img rock"
             />
             <img
               src="assets/leaves/o_leaves-green.png"
@@ -113,21 +112,19 @@
             />
           </div>
           <canvas id="fairy-canvas" width="1600" height="1600"></canvas>
-          <div class="buttons">
-            <button id="reset">Reset!</button>
-            <button id="randomize">Randomize!</button>
-          </div>
         </div>
         <div class="col options-container">
           <div class="options">
             <div class="option-section">
               <h2>Fairy</h2>
-              <span class="option fairy multi">Purple</span>
-              <span class="option fairy multi">Yellow</span>
-              <span class="option fairy multi">Red</span>
-              <span class="option fairy multi">Blue</span>
-              <span class="option fairy multi">Orange</span>
-              <span class="option fairy multi">Pink</span>
+              <div class="sub-options">
+                <span class="option fairy multi" id="purple">Purple</span>
+                <span class="option fairy multi">Yellow</span>
+                <span class="option fairy multi">Red</span>
+                <span class="option fairy multi">Blue</span>
+                <span class="option fairy multi">Orange</span>
+                <span class="option fairy multi">Pink</span>
+              </div>
             </div>
             <div class="option-section">
               <h2>Table</h2>
@@ -153,11 +150,17 @@
               <span class="option leaves single">Orange</span>
             </div>
           </div>
+
+          <div class="buttons">
+            <button id="reset">Reset!</button>
+            <button id="randomize">Randomize!</button>
+          </div>
+
+          <footer>
+            <p>Built and Illustration by Stacy Yuan and Zeyao Li, 2020</p>
+          </footer>
         </div>
       </main>
-      <footer>
-        <p>Built and Illustration by Stacy Yuan and Zeyao Li, 2020</p>
-      </footer>
     </div>
     <script type="text/javascript" src="index.js"></script>
   </body>

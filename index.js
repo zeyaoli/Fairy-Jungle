@@ -20,7 +20,6 @@ function render() {
 }
 
 function reset() {
-  console.log("reset");
   Array.from(document.getElementsByClassName("fairy-img")).forEach((img) => {
     // console.log(img);
     if (img.classList.contains("display")) {
