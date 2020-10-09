@@ -50,7 +50,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 
 #fairy-canvas {
@@ -88,7 +87,6 @@ button:hover {
   border-bottom: 1px solid var(--mid-green-color);
   display: flex;
   flex-direction: row;
-  width: 100%;
 }
 
 .option {
