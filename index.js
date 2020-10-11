@@ -3,6 +3,8 @@ const ctx = canvas.getContext("2d");
 
 const imgSize = 1600;
 
+
+
 let style = getComputedStyle(document.body);
 let lightPurpleColor = style.getPropertyValue("--light-purple-color");
 let darkPurpleColor = style.getPropertyValue("--dark-purple-color");
@@ -105,6 +107,14 @@ function toggleSingleItem(e) {
   }
   console.log(imgItem);
 }
+
+// Save Image
+var save = document.getElementById('saveimage');
+save.addEventListener('click', function () {
+  canvas.toBlob(function(blob) {
+    saveAs(blob, "fairy-jungle.png");
+  });
+});
 
 document.querySelectorAll(".option.multi").forEach((item) => {
   item.addEventListener("click", toggleMultipleItems);

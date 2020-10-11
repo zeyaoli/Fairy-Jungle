@@ -45,6 +45,10 @@ main {
   position: relative;
 }
 
+svg{
+  vertical-align: middle;
+}
+
 .options-container {
   border-left: 1px solid #000000;
   display: flex;
