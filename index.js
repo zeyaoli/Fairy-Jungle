@@ -46,9 +46,9 @@ function toggleMultipleItems(e) {
   // const optionValue = e.srcElement.innerHTML.toLowerCase();
   const optionValue = e.target.id;
   const category = e.target.classList[1];
-  console.log(e.srcElement);
+  // console.log(e.srcElement);
   //   console.log(e.srcElement.classList[1]);
-  console.log(e.target.querySelector("circle"));
+  // console.log(e.target.querySelector("circle"));
   const imgItem = document.getElementById(`${category}-${optionValue}`);
   if (!imgItem.classList.contains("display")) {
     imgItem.classList.add("display");
@@ -73,8 +73,8 @@ function removeCategoryImg(category) {
   });
 
   document.querySelectorAll(`.option.${category}`).forEach((item) => {
-    item.style.backgroundColor = "";
-    item.style.border = "";
+    item.querySelector("circle").style.stroke = ``;
+    item.querySelector("circle").style.strokeWidth = ``;
   });
 }
 //toggle single asset - if an asset gets selected, remove the rest from the same category
@@ -82,7 +82,7 @@ function toggleSingleItem(e) {
   // const optionValue = e.srcElement.innerHTML.toLowerCase();
   const optionValue = e.target.id;
   const category = e.target.classList[1];
-  console.log(e.target);
+  // console.log(e.target);
   const imgItem = document.getElementById(`${category}-${optionValue}`);
   //   console.log(imgItem);
 
@@ -90,18 +90,16 @@ function toggleSingleItem(e) {
     removeCategoryImg(category);
     imgItem.classList.add("display");
     render();
-    
     e.target.querySelector("circle").style.stroke = `${darkPurpleColor}`;
     e.target.querySelector("circle").style.strokeWidth = `3`;
   } else {
     removeCategoryImg(category);
     imgItem.classList.remove("display");
     render();
-    
     e.target.querySelector("circle").style.stroke = ``;
     e.target.querySelector("circle").style.strokeWidth = ``;
   }
-  console.log(imgItem);
+  // console.log(imgItem);
 }
 
 // Save Image
