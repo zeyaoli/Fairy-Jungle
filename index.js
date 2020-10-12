@@ -14,13 +14,14 @@ function render() {
       img.classList.add("display");
     }
     if (img.classList.contains("display")) {
-      
       ctx.drawImage(img, 0, 0, imgSize, imgSize);
     }
   });
 }
 
 function reset() {
+  const rockDefault = document.getElementById("rock");
+  rockDefault.classList.add("default");
   Array.from(document.getElementsByClassName("fairy-img")).forEach((img) => {
     // console.log(img);
     if (img.classList.contains("display")) {
