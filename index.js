@@ -7,14 +7,6 @@ let style = getComputedStyle(document.body);
 let lightPurpleColor = style.getPropertyValue("--light-purple-color");
 let darkPurpleColor = style.getPropertyValue("--dark-purple-color");
 
-// function preRender() {
-//   Array.from(document.getElementsByClassName("fairy-img")).forEach((img) => {
-//     if (img.classList.contains("default")) {
-//       ctx.drawImage(img, 0, 0, imgSize, imgSize);
-//     }
-//   });
-// }
-
 function render() {
   ctx.clearRect(0, 0, imgSize, imgSize);
   Array.from(document.getElementsByClassName("fairy-img")).forEach((img) => {
@@ -38,7 +30,7 @@ function reset() {
       img.classList.add("display");
     }
   });
-  preRender();
+  render();
 }
 
 function resetStyle() {
