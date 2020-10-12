@@ -3,8 +3,6 @@ const ctx = canvas.getContext("2d");
 
 const imgSize = 1600;
 
-
-
 let style = getComputedStyle(document.body);
 let lightPurpleColor = style.getPropertyValue("--light-purple-color");
 let darkPurpleColor = style.getPropertyValue("--dark-purple-color");
@@ -52,9 +50,10 @@ function resetStyle() {
 
 // toggle that applies to fairies or decorations
 function toggleMultipleItems(e) {
-  const optionValue = e.srcElement.innerHTML.toLowerCase();
-  //const optionValue = e.target.id;
-  const category = e.srcElement.classList[1];
+  // const optionValue = e.srcElement.innerHTML.toLowerCase();
+  const optionValue = e.target.id;
+  const category = e.target.classList[1];
+  console.log(e.srcElement);
   //   console.log(e.srcElement.classList[1]);
   const imgItem = document.getElementById(`${category}-${optionValue}`);
   if (!imgItem.classList.contains("display")) {
@@ -86,9 +85,10 @@ function removeCategoryImg(category) {
 }
 //toggle single asset - if an asset gets selected, remove the rest from the same category
 function toggleSingleItem(e) {
-  const optionValue = e.srcElement.innerHTML.toLowerCase();
-  //const optionValue = e.target.id;
-  const category = e.srcElement.classList[1];
+  // const optionValue = e.srcElement.innerHTML.toLowerCase();
+  const optionValue = e.target.id;
+  const category = e.target.classList[1];
+  console.log(e.target);
   const imgItem = document.getElementById(`${category}-${optionValue}`);
   //   console.log(imgItem);
 
@@ -109,9 +109,9 @@ function toggleSingleItem(e) {
 }
 
 // Save Image
-var save = document.getElementById('saveimage');
-save.addEventListener('click', function () {
-  canvas.toBlob(function(blob) {
+var save = document.getElementById("saveimage");
+save.addEventListener("click", function () {
+  canvas.toBlob(function (blob) {
     saveAs(blob, "fairy-jungle.png");
   });
 });

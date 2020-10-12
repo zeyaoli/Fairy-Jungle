@@ -45,8 +45,9 @@ main {
   position: relative;
 }
 
-svg{
+svg {
   vertical-align: middle;
+  pointer-events: none;
 }
 
 .options-container {
