@@ -14,6 +14,7 @@ function render() {
       img.classList.add("display");
     }
     if (img.classList.contains("display")) {
+      
       ctx.drawImage(img, 0, 0, imgSize, imgSize);
     }
   });
@@ -84,17 +85,20 @@ function toggleSingleItem(e) {
   const category = e.target.classList[1];
   // console.log(e.target);
   const imgItem = document.getElementById(`${category}-${optionValue}`);
+  const imgRock = document.getElementById("rock");
   //   console.log(imgItem);
 
   if (!imgItem.classList.contains("display")) {
     removeCategoryImg(category);
     imgItem.classList.add("display");
+    imgRock.classList.remove("default");
     render();
     e.target.querySelector("circle").style.stroke = `${darkPurpleColor}`;
     e.target.querySelector("circle").style.strokeWidth = `3`;
   } else {
     removeCategoryImg(category);
     imgItem.classList.remove("display");
+    imgRock.classList.add("default");
     render();
     e.target.querySelector("circle").style.stroke = ``;
     e.target.querySelector("circle").style.strokeWidth = ``;
