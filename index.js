@@ -36,8 +36,8 @@ function reset() {
 function resetStyle() {
   document.querySelectorAll(".option").forEach((item) => {
     // console.log(item);
-    // item.querySelectorAll("circle").style.stroke = ``;
-    // item.querySelectorAll("circle").style.strokeWidth = ``;
+    item.querySelectorAll("circle").style.stroke = ``;
+    item.querySelectorAll("circle").style.strokeWidth = ``;
   });
 }
 
@@ -54,7 +54,7 @@ function toggleMultipleItems(e) {
     imgItem.classList.add("display");
     render();
     e.target.querySelector("circle").style.stroke = `${darkPurpleColor}`;
-    e.target.querySelector("circle").style.strokeWidth = `2`;
+    e.target.querySelector("circle").style.strokeWidth = `3`;
 
     // console.log(document.getElementById(`fairy-${optionValue}`));
   } else {
@@ -90,12 +90,14 @@ function toggleSingleItem(e) {
     removeCategoryImg(category);
     imgItem.classList.add("display");
     render();
+    
     e.target.querySelector("circle").style.stroke = `${darkPurpleColor}`;
-    e.target.querySelector("circle").style.strokeWidth = `2`;
+    e.target.querySelector("circle").style.strokeWidth = `3`;
   } else {
     removeCategoryImg(category);
     imgItem.classList.remove("display");
     render();
+    
     e.target.querySelector("circle").style.stroke = ``;
     e.target.querySelector("circle").style.strokeWidth = ``;
   }
