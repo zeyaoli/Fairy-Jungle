@@ -50,6 +50,11 @@ svg {
   pointer-events: none;
 }
 
+.option:hover {
+  transform: translate(0, -3px);
+  transition: 0.2s ease-in;
+}
+
 .options-container {
   border-left: 1px solid #000000;
   display: flex;

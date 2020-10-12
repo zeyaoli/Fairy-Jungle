@@ -35,8 +35,9 @@ function reset() {
 
 function resetStyle() {
   document.querySelectorAll(".option").forEach((item) => {
-    item.style.backgroundColor = "";
-    item.style.border = "";
+    // console.log(item);
+    // item.querySelectorAll("circle").style.stroke = ``;
+    // item.querySelectorAll("circle").style.strokeWidth = ``;
   });
 }
 
@@ -47,18 +48,19 @@ function toggleMultipleItems(e) {
   const category = e.target.classList[1];
   console.log(e.srcElement);
   //   console.log(e.srcElement.classList[1]);
+  console.log(e.target.querySelector("circle"));
   const imgItem = document.getElementById(`${category}-${optionValue}`);
   if (!imgItem.classList.contains("display")) {
     imgItem.classList.add("display");
     render();
-    e.srcElement.style.backgroundColor = lightPurpleColor;
-    e.srcElement.style.border = `3px solid ${darkPurpleColor}`;
+    e.target.querySelector("circle").style.stroke = `${darkPurpleColor}`;
+    e.target.querySelector("circle").style.strokeWidth = `2`;
 
     // console.log(document.getElementById(`fairy-${optionValue}`));
   } else {
     imgItem.classList.remove("display");
-    e.srcElement.style.backgroundColor = "";
-    e.srcElement.style.border = ``;
+    e.target.querySelector("circle").style.stroke = ``;
+    e.target.querySelector("circle").style.strokeWidth = ``;
     render();
   }
   //   console.log(document.getElementById(`${category}-${optionValue}`));
@@ -88,14 +90,14 @@ function toggleSingleItem(e) {
     removeCategoryImg(category);
     imgItem.classList.add("display");
     render();
-    e.srcElement.style.backgroundColor = lightPurpleColor;
-    e.srcElement.style.border = `3px solid ${darkPurpleColor}`;
+    e.target.querySelector("circle").style.stroke = `${darkPurpleColor}`;
+    e.target.querySelector("circle").style.strokeWidth = `2`;
   } else {
     removeCategoryImg(category);
     imgItem.classList.remove("display");
     render();
-    e.srcElement.style.backgroundColor = "";
-    e.srcElement.style.border = "";
+    e.target.querySelector("circle").style.stroke = ``;
+    e.target.querySelector("circle").style.strokeWidth = ``;
   }
   console.log(imgItem);
 }
