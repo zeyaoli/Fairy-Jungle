@@ -35,9 +35,9 @@ function reset() {
 
 function resetStyle() {
   document.querySelectorAll(".option").forEach((item) => {
-    // console.log(item);
-    item.querySelectorAll("circle").style.stroke = ``;
-    item.querySelectorAll("circle").style.strokeWidth = ``;
+    // console.log(item.querySelector("circle"));
+    item.querySelector("circle").style.stroke = ``;
+    item.querySelector("circle").style.strokeWidth = ``;
   });
 }
 

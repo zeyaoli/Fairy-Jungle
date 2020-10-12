@@ -156,4 +156,8 @@ footer p {
     padding: 0;
     justify-content: space-evenly;
   }
+
+  .option:hover {
+    transform: none;
+  }
 }
